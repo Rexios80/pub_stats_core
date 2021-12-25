@@ -1,0 +1,17 @@
+name: pub_stats_core
+publish_to: none
+version: 1.0.0
+
+environment:
+  sdk: ">=2.15.1 <3.0.0"
+
+dependencies:
+  json_annotation: ^4.4.0
+  pub_api_client:
+    git:
+      url: https://github.com/Rexios80/pub_api_client
+      ref: 9b994209070472159a4f401fea5d803b2164264b
+
+dev_dependencies:
+  rexios_lints: ^1.0.0
+  json_serializable: ^6.1.3
