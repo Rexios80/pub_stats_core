@@ -5,15 +5,15 @@ part 'global_stats.g.dart';
 @JsonSerializable()
 class GlobalStats {
   final int packageCount;
-  final DateTime lastUpdated;
   final String mostLikedPackage;
   final String mostPopularPackage;
+  final DateTime lastUpdated;
 
   GlobalStats({
     required this.packageCount,
-    required this.lastUpdated,
     required this.mostLikedPackage,
     required this.mostPopularPackage,
+    required this.lastUpdated,
   });
 
   factory GlobalStats.fromJson(Map<String, dynamic> json) =>
