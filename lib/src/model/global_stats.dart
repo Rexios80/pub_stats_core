@@ -6,10 +6,14 @@ part 'global_stats.g.dart';
 class GlobalStats {
   final int packageCount;
   final DateTime lastUpdated;
+  final String mostLikedPackage;
+  final String mostPopularPackage;
 
   GlobalStats({
     required this.packageCount,
     required this.lastUpdated,
+    required this.mostLikedPackage,
+    required this.mostPopularPackage,
   });
 
   factory GlobalStats.fromJson(Map<String, dynamic> json) =>

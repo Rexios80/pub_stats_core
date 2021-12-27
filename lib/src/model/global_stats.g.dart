@@ -9,10 +9,14 @@ part of 'global_stats.dart';
 GlobalStats _$GlobalStatsFromJson(Map<String, dynamic> json) => GlobalStats(
       packageCount: json['packageCount'] as int,
       lastUpdated: DateTime.parse(json['lastUpdated'] as String),
+      mostLikedPackage: json['mostLikedPackage'] as String,
+      mostPopularPackage: json['mostPopularPackage'] as String,
     );
 
 Map<String, dynamic> _$GlobalStatsToJson(GlobalStats instance) =>
     <String, dynamic>{
       'packageCount': instance.packageCount,
       'lastUpdated': instance.lastUpdated.toIso8601String(),
+      'mostLikedPackage': instance.mostLikedPackage,
+      'mostPopularPackage': instance.mostPopularPackage,
     };
