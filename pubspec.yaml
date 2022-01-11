@@ -7,7 +7,10 @@ environment:
 
 dependencies:
   json_annotation: ^4.4.0
-  pub_api_client: ^2.2.0
+  pub_api_client:
+    git:
+      url: https://github.com/Rexios80/pub_api_client
+      ref: f778f4750db78f6ecddae89e918b73bd7acf4d99
 
 dev_dependencies:
   rexios_lints: ^1.0.0
