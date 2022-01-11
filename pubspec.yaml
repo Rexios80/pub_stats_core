@@ -10,7 +10,7 @@ dependencies:
   pub_api_client:
     git:
       url: https://github.com/Rexios80/pub_api_client
-      ref: 271038b5b5a4b19163f624f71df74f629f588d66
+      ref: 6bc80bc08bc601f32840c0dbdc52306aaece46d4
 
 dev_dependencies:
   rexios_lints: ^1.0.0
