@@ -7,7 +7,7 @@ environment:
 
 dependencies:
   json_annotation: ^4.4.0
-  pub_api_client: ^2.3.0
+  pub_api_client: ^2.2.0
 
 dev_dependencies:
   rexios_lints: ^1.0.0
