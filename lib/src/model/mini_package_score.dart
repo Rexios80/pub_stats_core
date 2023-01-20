@@ -8,13 +8,13 @@ part 'mini_package_score.g.dart';
 class MiniPackageScore {
   /// Like count
   @JsonKey(name: 'l')
-  final int likes;
+  final int likeCount;
 
   /// Popularity score
   @JsonKey(name: 'p')
-  final int popularity;
+  final int popularityScore;
 
-  MiniPackageScore(this.likes, this.popularity);
+  MiniPackageScore(this.likeCount, this.popularityScore);
 
   static MiniPackageScore? fromPackageScore(PackageScore score) {
     final popularityScore = score.popularityScore;
