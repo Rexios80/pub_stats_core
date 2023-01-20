@@ -7,12 +7,14 @@ part 'mini_package_score.g.dart';
 @JsonSerializable()
 class MiniPackageScore {
   /// Like count
-  final int l;
+  @JsonKey(name: 'l')
+  final int likes;
 
   /// Popularity score
-  final int p;
+  @JsonKey(name: 'p')
+  final int popularity;
 
-  MiniPackageScore(this.l, this.p);
+  MiniPackageScore(this.likes, this.popularity);
 
   static MiniPackageScore? fromPackageScore(PackageScore score) {
     final popularityScore = score.popularityScore;

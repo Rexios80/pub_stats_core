@@ -14,6 +14,6 @@ MiniPackageScore _$MiniPackageScoreFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$MiniPackageScoreToJson(MiniPackageScore instance) =>
     <String, dynamic>{
-      'l': instance.l,
-      'p': instance.p,
+      'l': instance.likes,
+      'p': instance.popularity,
     };
