@@ -1,5 +1,7 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
+// ignore_for_file: require_trailing_commas
+
 part of 'developer_package_data.dart';
 
 // **************************************************************************
@@ -15,6 +17,7 @@ DeveloperPackageData _$DeveloperPackageDataFromJson(
       grantedPoints: json['grantedPoints'] as int,
       maxPoints: json['maxPoints'] as int,
       isDiscontinued: json['isDiscontinued'] as bool? ?? false,
+      isUnlisted: json['isUnlisted'] as bool? ?? false,
     );
 
 Map<String, dynamic> _$DeveloperPackageDataToJson(
@@ -26,4 +29,5 @@ Map<String, dynamic> _$DeveloperPackageDataToJson(
       'grantedPoints': instance.grantedPoints,
       'maxPoints': instance.maxPoints,
       'isDiscontinued': instance.isDiscontinued,
+      'isUnlisted': instance.isUnlisted,
     };

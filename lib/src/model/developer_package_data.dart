@@ -12,6 +12,7 @@ class DeveloperPackageData extends Equatable {
   final int grantedPoints;
   final int maxPoints;
   final bool isDiscontinued;
+  final bool isUnlisted;
 
   DeveloperPackageData._({
     required this.version,
@@ -20,6 +21,7 @@ class DeveloperPackageData extends Equatable {
     required this.grantedPoints,
     required this.maxPoints,
     this.isDiscontinued = false,
+    this.isUnlisted = false,
   });
 
   static DeveloperPackageData? fromPub(
@@ -42,6 +44,7 @@ class DeveloperPackageData extends Equatable {
       grantedPoints: grantedPoints,
       maxPoints: maxPoints,
       isDiscontinued: options.isDiscontinued,
+      isUnlisted: options.isUnlisted,
     );
   }
 
@@ -58,6 +61,7 @@ class DeveloperPackageData extends Equatable {
         grantedPoints,
         maxPoints,
         isDiscontinued,
+        isUnlisted,
       ];
 
   DeveloperPackageDiff diff(DeveloperPackageData update) {
@@ -68,6 +72,7 @@ class DeveloperPackageData extends Equatable {
       grantedPointsChange: stringDiff(grantedPoints, update.grantedPoints),
       maxPointsChange: stringDiff(maxPoints, update.maxPoints),
       isDiscontinuedChange: stringDiff(isDiscontinued, update.isDiscontinued),
+      isUnlistedChange: stringDiff(isUnlisted, update.isUnlisted),
       warnings: update.generateWarnings(),
     );
   }
@@ -120,6 +125,7 @@ class DeveloperPackageDiff {
   final String? grantedPointsChange;
   final String? maxPointsChange;
   final String? isDiscontinuedChange;
+  final String? isUnlistedChange;
   final List<String> warnings;
 
   DeveloperPackageDiff({
@@ -129,6 +135,7 @@ class DeveloperPackageDiff {
     this.grantedPointsChange,
     this.maxPointsChange,
     this.isDiscontinuedChange,
+    this.isUnlistedChange,
     required this.warnings,
   });
 
@@ -139,6 +146,7 @@ class DeveloperPackageDiff {
         grantedPointsChange = data.grantedPoints.toString(),
         maxPointsChange = data.maxPoints.toString(),
         isDiscontinuedChange = data.isDiscontinued.toString(),
+        isUnlistedChange = data.isUnlisted.toString(),
         warnings = data.generateWarnings();
 
   bool get onlyPopularity =>
@@ -147,5 +155,6 @@ class DeveloperPackageDiff {
       popularityScoreChange != null &&
       grantedPointsChange == null &&
       maxPointsChange == null &&
-      isDiscontinuedChange == null;
+      isDiscontinuedChange == null &&
+      isUnlistedChange == null;
 }
