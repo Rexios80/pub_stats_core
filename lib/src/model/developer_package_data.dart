@@ -149,12 +149,14 @@ class DeveloperPackageDiff {
         isUnlistedChange = data.isUnlisted.toString(),
         warnings = data.generateWarnings();
 
-  bool get onlyPopularity =>
-      versionChange == null &&
-      likeCountChange == null &&
-      popularityScoreChange != null &&
-      grantedPointsChange == null &&
-      maxPointsChange == null &&
-      isDiscontinuedChange == null &&
-      isUnlistedChange == null;
+  bool get significant =>
+      versionChange != null ||
+      likeCountChange != null ||
+      (popularityScoreChange != null &&
+          popularityScoreChange!.contains('->')) ||
+      grantedPointsChange != null ||
+      maxPointsChange != null ||
+      isDiscontinuedChange != null ||
+      isUnlistedChange != null ||
+      warnings.isNotEmpty;
 }
