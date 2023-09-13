@@ -110,6 +110,8 @@ class DeveloperPackageData extends Equatable {
   }
 
   List<String> generateWarnings() {
+    if (isDiscontinued) return [];
+
     final warnings = <String>[];
     if (grantedPoints != maxPoints) {
       warnings.add('Missing pub points');
