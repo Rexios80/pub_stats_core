@@ -3,15 +3,15 @@ publish_to: none
 version: 1.0.0
 
 environment:
-  sdk: ">=2.18.0 <3.0.0"
+  sdk: ^3.0.0
 
 dependencies:
   equatable: ^2.0.5
-  http: ^0.13.5
+  http: ^1.1.0
   json_annotation: ^4.4.0
   pub_api_client: ^2.2.0
 
 dev_dependencies:
-  rexios_lints: ^5.0.0
+  rexios_lints: ^6.0.1
   build_runner: ^2.1.7
   json_serializable: ^6.1.3
